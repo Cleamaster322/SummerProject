@@ -3,15 +3,16 @@ var zoom = 1;
 
 var blobs = []
 
+
 function setup(){
     createCanvas(window.innerWidth-10,window.innerHeight-30);
 
     blob = new Blob(0,0,64);
-    for ( var i=0; i<1800;i++){
+    for ( var i=0; i<100;i++){
 
 
-        var x = random(-width,width*6)
-        var y = random(-height,height*6)
+        var x = random(-width,width)
+        var y = random(-height,height)
         blobs[i] = new Blob(x,y,10);
     }
 }
@@ -26,8 +27,9 @@ function draw(){
     translate(-blob.pos.x,-blob.pos.y)
     
     blob.show();
+    console.log(blob.x, blob.y)
     blob.update();
-    console.log(blobs)
+    // console.log(blob.pos)
     for ( var i=blobs.length-1; i>=0;i--){
         if ( blob.eats(blobs[i]) ){
             blobs.splice(i,1);
