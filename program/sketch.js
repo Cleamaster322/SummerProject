@@ -4,14 +4,14 @@ var zoom = 1;
 var blobs = []
 
 function setup(){
-    createCanvas(1840,920);
+    createCanvas(window.innerWidth-10,window.innerHeight-30);
 
     blob = new Blob(0,0,64);
-    for ( var i=0; i<600;i++){
+    for ( var i=0; i<1800;i++){
 
 
-        var x = random(-width,width*2)
-        var y = random(-height,height*2)
+        var x = random(-width,width*6)
+        var y = random(-height,height*6)
         blobs[i] = new Blob(x,y,10);
     }
 }

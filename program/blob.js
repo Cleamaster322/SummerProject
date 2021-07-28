@@ -26,7 +26,7 @@ function Blob(x,y,r){
     }
 
     this.show = function(){
-        fill(this.color);   // Поестить чтоб цвет не менялся
+        fill(this.color);   
         ellipse(this.pos.x,this.pos.y,this.r*2,this.r*2)
     }
 }
